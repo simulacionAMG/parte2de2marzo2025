@@ -1,0 +1,1936 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" prefix="dc: http://purl.org/dc/elements/1.1/">
+<head><meta name="author" content="Created with Hot Potatoes by Half-Baked Software, registered to Arturo Hern&#x00E1;ndez Maldonado."/><meta name="keywords" content="Hot Potatoes, Hot Potatoes, Half-Baked Software, Windows, University of Victoria"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+<meta name="dc:creator" content="Arturo Hern&#x00E1;ndez Maldonado" />
+<meta name="dc:creator" content="Agnes Simonet" />
+<meta name="dc:creator" content="Agn&#x00E8;s Simonet" />
+<meta name="dc:title" content="Aptitudes Musicales Generales (AMG) parte 2de2" />
+
+
+
+<title>
+Aptitudes Musicales Generales (AMG) parte 2de2
+</title>
+
+<!-- Made with executable version 7.0 Release 3 Build 0 -->
+
+<!-- JQuiz7+ 
+	 by Agn&#195;&#168;s Simonet, June 2020
+-->
+
+<!-- jquiz7.ht_ modified by AS - June 2020
+	HTML5 audio :
+    	* hiddenPlayer added for audio - line 89 in jquiz7.ht_ 
+    	* player4.js loaded - line 41 in jquiz7.ht_
+	"strHeaderCode" moved below "strStyleSheet" - line 36 in jquiz7.ht_ , to be able to modify a style via "strHeaderCode"
+-->
+
+<!-- AS : original place for "strHeaderCode" -->
+
+<style>
+
+/* This is the CSS stylesheet used in the exercise. */
+/* Elements in square brackets are replaced by data based on configuration settings when the exercise is built. */
+
+/* BeginCorePageCSS */
+
+/* Made with executable version 7.0 Release 3 Build 0 */
+
+/* modified by Agn&#195;&#168;s Simonet for HP7+ (July 2020):
+		split of div.ExerciseContainer and div.ReadingContainer to be able to change the widths via HeaderCode (line 95 and 102 in hp7.cs_)
+		addition of Audio Gloss style (line 639) and variables (line 34 in hp7.cs_)
+		.RightItem (line 189 in hp7.cs_)
+
+/* CSS variables for colours. */
+
+:root{
+	--strFontFace:       Geneva,Arial,sans-serif;
+	--strFontSize:       medium;
+	--strTextColor:      #f0f0ff;
+	--strTitleColor:     #fbf02f;
+
+	--strFuncLightColor: #7f7f95;
+	--strFuncShadeColor: #000015;
+	--strLinkColor:      #deffde;
+	--strVLinkColor:     #ffd5d5;
+	
+	--strNavBarColor:    #000000;
+	--strNavLightColor:  #7f7f7f;
+	--strNavShadeColor:  #000000;
+	--strNavTextColor:   #ffffff;
+	
+	--strPageBGColor:    #000020;
+	--strExBGColor:      #00002b;
+	
+	/* added by AS */
+	--strGlossColor: blue;  /*for mini audio button */
+	--strGlossBGColor: gold;  /*for mini audio button */
+}
+
+body{
+	font-family: var(--strFontFace);
+	background-color: var(--strPageBGColor);
+	color: var(--strTextColor);
+ 
+	margin-right: 5%;
+	margin-left: 5%;
+	font-size: var(--strFontSize);
+	padding-bottom: 0.5em;
+}
+
+p{
+	text-align: left;
+	margin: 0px;
+	font-size: 1em;
+}
+
+table,div,span,td{
+	font-size: 1em;
+	color: var(--strTextColor);
+}
+
+div.Titles{
+	padding: 0.5em;;
+	text-align: center;
+	color: var(--strTitleColor);
+}
+
+button{
+	font-family: var(--strFontFace);
+	font-size: 1em;
+	display: inline;
+}
+
+.ExerciseTitle{
+	font-size: 140%;
+	color: var(--strTitleColor);
+}
+
+.ExerciseSubtitle{
+	font-size: 120%;
+	color: var(--strTitleColor);
+}
+
+div.StdDiv, div.ExerciseContainer, div.ReadingContainer{
+	background-color: var(--strExBGColor);
+	text-align: center;
+	font-size: 1em;
+	color: var(--strTextColor);
+	padding: 0.5em;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	border-color: var(--strTextColor);
+	margin-bottom: 1px;
+}
+
+div.ReadingContainer{
+	min-width: 15em;
+	flex-grow: 1;
+	flex-basis: 0;
+	margin: 1px;
+}
+
+div.ExerciseContainer{
+	min-width: 15em;
+	flex-grow: 1;
+	flex-basis: 0;
+	margin: 1px;
+}
+
+div#ContainerDiv{
+	margin: -1px;
+	padding: 0;
+	border: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+/* EndCorePageCSS */
+
+.RTLText{
+	text-align: right;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", var(--strFontFace); 
+}
+
+.CentredRTLText{
+	text-align: center;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", var(--strFontFace); 
+}
+
+button p.RTLText{
+	text-align: center;
+}
+
+.RTLGapBox{
+	text-align: right;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Times New Roman", var(--strFontFace);
+}
+
+.Guess{
+	font-weight: bold;
+}
+
+.CorrectAnswer{
+	font-weight: bold;
+}
+
+div#Timer{
+	padding: 0.25em;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	color: var(--strTitleColor);
+}
+
+span#TimerText{
+	padding: 0.25em;
+	border-width: 1px;
+	border-style: solid;
+	font-weight: bold;
+	display: none;
+	color: var(--strTitleColor);
+}
+
+span.Instructions{
+
+}
+
+div.ExerciseText{
+
+}
+
+.FeedbackText, .FeedbackText span.CorrectAnswer, .FeedbackText span.Guess, .FeedbackText span.Answer{
+	color: var(--strTitleColor);
+}
+
+.LeftItem{
+	font-size: 1em;
+	color: var(--strTextColor);
+	text-align: left;
+}
+
+.RightItem{
+	font-weight: bold;
+	font-size: 1em;
+	/*color: var(--strTextColor);*/
+	color: var(--strLinkColor);
+	text-align: left;
+}
+
+span.CorrectMark{
+
+}
+
+input, textarea{
+	font-family: var(--strFontFace);
+	font-size: 120%;
+}
+
+select{
+	font-size: 1em;
+}
+
+div.Feedback {
+	background-color: var(--strPageBGColor);
+	left: 33%;
+	width: 34%;
+	top: 33%;
+	z-index: 1;
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px;
+	text-align: center;
+	color: var(--strTitleColor);
+	position: absolute;
+	display: none;
+	font-size: 1em;
+}
+
+
+
+
+div.ExerciseDiv{
+	color: var(--strTextColor);
+}
+
+/* JMatch standard output table. */
+table.MatchTable{
+	margin: 2em auto; 
+	border-width: 0;
+}
+
+/* JMatch flashcard styles */
+table.FlashcardTable{
+	background-color: transparent;
+	color: var(--strTextColor);
+	border-color: var(--strTextColor);
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	/*width: 90%;*/
+	position: relative;
+	text-align: center;
+	padding: 0px;
+}
+
+table.FlashcardTable tr{
+	border-style: none;
+	margin: 0px;
+	padding: 0px;
+	background-color: var(--strExBGColor);
+}
+
+table.FlashcardTable td.Showing{
+	font-size: 140%;
+	text-align: center;
+	width: 50%;
+	display: table-cell;
+	padding: 2em;
+	margin: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0.5em;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strNavShadeColor);
+	background-color: var(--strPageBGColor);
+}
+
+table.FlashcardTable td.Hidden{
+	display: none;
+}
+
+/* JMix styles */
+div.JMixDrag, div.JMatchDrag{
+	padding: 0;
+	background-color: var(--strPageBGColor);
+	border-style: none;
+}
+
+div#GuessDiv{
+	padding: 0.5em;
+	margin-bottom: 2em;
+}
+
+div#SegmentDiv{
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-align: center;
+}
+
+a.ExSegment{
+	font-size: 120%;
+	font-weight: bold;
+	text-decoration: none;
+	color: var(--strTextColor);
+	display: inline-block;
+	padding: 0.5em;
+	border: solid 1pt gray;
+	margin-bottom: 0.5em;
+}
+
+span.RemainingWordList{
+	font-style: italic;
+}
+
+div.DropLine {
+	position: absolute;
+	text-align: left;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: var(--strTitleColor);
+	width: 80%;
+	left: 10%;
+}
+
+/* JCloze styles */
+
+.ClozeWordList{
+	text-align: center;
+	font-weight: bold;
+}
+
+div.ClozeBody{
+	text-align: left;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	line-height: 2.0;
+}
+
+span.GapSpan{
+	font-weight: bold;
+}
+
+/* JCross styles */
+
+table.CrosswordGrid{
+	margin: auto auto 1em auto;
+	border-collapse: collapse;
+	padding: 0px;
+	background-color: #000000;
+}
+
+table.CrosswordGrid tbody tr td{
+	width: 1.5em;
+	height: 1.5em;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 140%;
+	padding: 1px;
+	margin: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000000;
+	color: #000000;
+}
+
+table.CrosswordGrid span{
+	color: #000000;
+}
+
+table.CrosswordGrid td.BlankCell{
+	background-color: #000000;
+	color: #000000;
+}
+
+table.CrosswordGrid td.LetterOnlyCell{
+	text-align: center;
+	vertical-align: middle;
+	background-color: #ffffff;
+	color: #000000;
+	font-weight: bold;
+}
+
+table.CrosswordGrid td.NumLetterCell{
+	text-align: left;
+	vertical-align: top;
+	background-color: #ffffff;
+	color: #000000;
+	padding: 1px;
+	font-weight: bold;
+}
+
+.NumLetterCellText{
+	cursor: pointer;
+	color: #000000;
+}
+
+.GridNum{
+	vertical-align: super;
+	font-size: 66%;
+	font-weight: bold;
+	text-decoration: none;
+	color: #000000;
+}
+
+.GridNum:hover, .GridNum:visited{
+	color: #000000;
+}
+
+table#Clues{
+	margin: auto;
+	vertical-align: top;
+}
+
+table#Clues td{
+	vertical-align: top;
+}
+
+table.ClueList{
+  margin: auto;
+}
+
+td.ClueNum{
+	text-align: right;
+	font-weight: bold;
+	vertical-align: top;
+}
+
+td.Clue{
+	text-align: left;
+}
+
+div#ClueEntry{
+	text-align: left;
+	margin-bottom: 1em;
+}
+
+/* Keypad styles */
+
+div.Keypad{
+	text-align: center;
+	display: none; /* initially hidden, shown if needed */
+	margin-bottom: 0.5em;
+}
+
+div.Keypad button{
+	font-family: var(--strFontFace);
+	font-size: 120%;
+	background-color: #ffffff;
+	color: #000000;
+	width: 2em;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0.5em;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
+}
+
+/* JQuiz styles */
+
+div.QuestionNavigation{
+	text-align: center;
+}
+
+.QNum{
+	margin: 0em 1em 0.5em 1em;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+textarea{
+	font-family: var(--strFontFace);
+}
+
+.QuestionText{
+	text-align: left;
+	margin: 0px;
+	font-size: 1em;
+}
+
+.Answer{
+	font-size: 120%;
+}
+
+.PartialAnswer{
+	font-size: 120%;
+	letter-spacing: 0.1em;
+	color: var(--strTitleColor);
+}
+
+.Highlight{
+	color: #000000;
+	background-color: #ffff00;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+ol.QuizQuestions{
+	text-align: left;
+	list-style-type: none;
+}
+
+li.QuizQuestion{
+	padding: 1em;
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+}
+
+ol.MCAnswers{
+	text-align: left;
+	list-style-type: upper-alpha;
+	padding: 1em;
+}
+
+ol.MCAnswers li{
+	margin-bottom: 1em;
+}
+
+ol.MSelAnswers{
+	text-align: left;
+	list-style-type: lower-alpha;
+	padding: 1em;
+}
+
+div.ShortAnswer{
+	padding: 1em;
+}
+
+.FuncButton {
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 3em;
+
+	border-left-color: var(--strFuncLightColor);
+	border-top-color: var(--strFuncLightColor);
+	border-right-color: var(--strFuncShadeColor);
+	border-bottom-color: var(--strFuncShadeColor);
+	color: var(--strTextColor);
+	background-color: var(--strExBGColor);
+
+	border-width: 1pt;
+	cursor: pointer;	
+	box-shadow: 0.2em 0.3em 0.2em var(--strFuncShadeColor);
+}
+
+.FuncButton:active {
+	box-shadow: none;
+}
+
+.FuncButton:hover{
+	color: var(--strExBGColor);
+	background-color: var(--strTextColor);
+}
+
+/*BeginNavBarStyle*/
+
+div.NavButtonBar{
+	background-color: var(--strNavBarColor);
+	text-align: center;
+	margin: 0.25rem 0;
+	clear: both;
+	font-size: 1em;
+	padding: 0.2em;
+}
+
+.NavButton {
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 3em;
+	
+	border-left-color: var(--strNavLightColor);
+	border-top-color: var(--strNavLightColor);
+	border-right-color: var(--strNavShadeColor);
+	border-bottom-color: var(--strNavShadeColor); 
+	background-color: var(--strNavBarColor);
+	color: var(--strNavTextColor);
+
+	border-width: 1pt;
+	cursor: pointer;	
+	box-shadow: 0.2em 0.3em 0.2em var(--strNavShadeColor);
+}
+
+.NavButton:active {
+	box-shadow: none;
+}
+
+.NavButton:hover{
+	color: var(--strNavBarColor);
+	background-color: var(--strNavTextColor);
+}
+
+/*EndNavBarStyle*/
+
+a{
+	color: var(--strLinkColor);
+}
+
+a:visited{
+	color: var(--strVLinkColor);
+}
+
+a:hover{
+	color: var(--strLinkColor);
+}
+
+div.CardStyle {
+	position: absolute;
+	font-family: var(--strFontFace);
+	font-size: 1em;
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 2em;
+	border-width: 1pt;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
+	background-color: var(--strExBGColor);
+	left: -50px;
+	top: -50px;
+	overflow: visible;
+	touch-action: none;
+	user-select: none;
+	box-sizing: border-box;
+}
+
+div.CardStyleCentered{
+	text-align: center;
+}
+
+/* Audio Gloss style */
+/* for html5 audio mini button (author : Stan Bogdanov ; modified by AS) */
+
+a:link.gloss ,
+a:visited.gloss ,
+a:active.gloss {
+	display: inline-block;
+	font-family: Arial;
+	color: var(--strGlossColor);
+	background-color: var(--strGlossBGColor);
+	font-weight: bold;
+	cursor:pointer;
+	text-decoration: none;
+	border: 1px solid #777;
+	width: 1.5em;
+    height: 1.5em;
+    line-height: 1.5;  /*for JCloze */
+    border-radius: 50%;
+    padding: 0.25em;
+    text-align: center;
+}
+
+a:hover.gloss {
+	color: var(--strGlossBGColor);
+	background-color: var(--strGlossColor);
+	border: 1px solid #444; 
+}
+
+a:link.gloss ,
+a:visited.gloss ,
+a:active.gloss,
+a:hover.gloss {
+	outline: 0 none;
+}
+.rtl{
+	text-align: right;
+	font-size: 140%;
+}
+
+
+</style>
+
+<!-- AS : new place for "strHeaderCode" -->
+<!-- The following insertion allows you to add your own code directly to this head tag from the configuration screen -->
+<style>
+div.ReadingContainer{flex-grow: 30;}
+div.ExerciseContainer{flex-grow: 70;}
+</style>
+
+<!-- added by AS -->
+<!-- for audio button -->
+<!-- if player4.js and the htm exercice are in the same folder -->
+<script src="player4.js"></script>
+<!-- end of addition by AS -->
+
+<script>
+
+//<![CDATA[
+
+<!--
+
+
+
+
+//CODE FOR HANDLING NAV BUTTONS AND FUNCTION BUTTONS
+
+function FocusAButton(){
+	if (document.getElementById('CheckButton1') != null){
+		document.getElementById('CheckButton1').focus();
+	}
+	else{
+		if (document.getElementById('CheckButton2') != null){
+			document.getElementById('CheckButton2').focus();
+		}
+		else{
+			document.getElementsByTagName('button')[0].focus();
+		}
+	}
+}
+
+
+
+
+//CODE FOR HANDLING DISPLAY OF POPUP FEEDBACK BOX
+
+var topZ = 1000;
+
+function ShowMessage(Feedback){
+	var Output = Feedback + '<br /><br />';
+	document.getElementById('FeedbackContent').innerHTML = Output;
+	var FDiv = document.getElementById('FeedbackDiv');
+	topZ++;
+	FDiv.style.zIndex = topZ;
+	FDiv.style.top = TopSettingWithScrollOffset(30) + 'px';
+
+	FDiv.style.display = 'block';
+
+	ShowElements(false, 'input');
+	ShowElements(false, 'select');
+	ShowElements(false, 'object');
+	ShowElements(true, 'object', 'FeedbackContent');
+
+//Focus the OK button
+	setTimeout("document.getElementById('FeedbackOKButton').focus()", 50);
+	
+//
+//	RefreshImages();
+//
+}
+
+function ShowElements(Show, TagName, ContainerToReverse){
+// added third argument to allow objects in the feedback box to appear
+//IE bug -- hide all the form elements that will show through the popup
+//FF on Mac bug : doesn't redisplay objects whose visibility is set to visible
+//unless the object's display property is changed
+
+	//get container object (by Id passed in, or use document otherwise)
+	TopNode = document.getElementById(ContainerToReverse);
+	var Els;
+	if (TopNode != null) {
+		Els = TopNode.getElementsByTagName(TagName);
+	} else {
+		Els = document.getElementsByTagName(TagName);
+	}
+
+	for (var i=0; i<Els.length; i++){
+		if (TagName == "object") {
+			//manipulate object elements in all browsers
+			if (Show == true){
+				Els[i].style.visibility = 'visible';
+			}
+			else{
+				Els[i].style.visibility = 'hidden';
+			}
+		} 
+	}
+}
+
+
+
+function HideFeedback(){
+	document.getElementById('FeedbackDiv').style.display = 'none';
+	ShowElements(true, 'input');
+	ShowElements(true, 'select');
+	ShowElements(true, 'object');
+}
+
+
+//GENERAL UTILITY FUNCTIONS AND VARIABLES
+
+//PAGE DIMENSION FUNCTIONS
+function PageDim(){
+//Get the page width and height
+	this.W = 600;
+	this.H = 400;
+	this.W = document.getElementsByTagName('body')[0].offsetWidth;
+	this.H = document.getElementsByTagName('body')[0].offsetHeight;
+}
+
+var pg = null;
+
+function GetPageXY(El) {
+	var XY = {x: 0, y: 0};
+	while(El){
+		XY.x += El.offsetLeft;
+		XY.y += El.offsetTop;
+		El = El.offsetParent;
+	}
+	return XY;
+}
+
+function GetScrollTop(){
+	if (typeof(window.pageYOffset) == 'number'){
+		return window.pageYOffset;
+	}
+	else{
+		if ((document.body)&&(document.body.scrollTop)){
+			return document.body.scrollTop;
+		}
+		else{
+			if ((document.documentElement)&&(document.documentElement.scrollTop)){
+				return document.documentElement.scrollTop;
+			}
+			else{
+				return 0;
+			}
+		}
+	}
+}
+
+function GetViewportHeight(){
+	if (typeof window.innerHeight != 'undefined'){
+		return window.innerHeight;
+	}
+	else{
+		if (((typeof document.documentElement != 'undefined')&&(typeof document.documentElement.clientHeight !=
+     'undefined'))&&(document.documentElement.clientHeight != 0)){
+			return document.documentElement.clientHeight;
+		}
+		else{
+			return document.getElementsByTagName('body')[0].clientHeight;
+		}
+	}
+}
+
+function TopSettingWithScrollOffset(TopPercent){
+	var T = Math.floor(GetViewportHeight() * (TopPercent/100));
+	return GetScrollTop() + T; 
+}
+
+//CODE FOR AVOIDING LOSS OF DATA WHEN BACKSPACE KEY INVOKES history.back()
+var InTextBox = false;
+
+function SuppressBackspace(e){ 
+	if (InTextBox == true){return;}
+	thisKey = e.keyCode;
+
+	var Suppress = false;
+
+	if (thisKey == 8) {
+		Suppress = true;
+		e.preventDefault();
+	}
+}
+
+window.addEventListener('keypress',SuppressBackspace,false);
+
+function ReduceItems(InArray, ReduceToSize){
+	var ItemToDump=0;
+	var j=0;
+	while (InArray.length > ReduceToSize){
+		ItemToDump = Math.floor(InArray.length*Math.random());
+		InArray.splice(ItemToDump, 1);
+	}
+}
+
+function Shuffle(InArray){
+	var Num;
+	var Temp = new Array();
+	var Len = InArray.length;
+
+	var j = Len;
+
+	for (var i=0; i<Len; i++){
+		Temp[i] = InArray[i];
+	}
+
+	for (i=0; i<Len; i++){
+		Num = Math.floor(j  *  Math.random());
+		InArray[i] = Temp[Num];
+
+		for (var k=Num; k < (j-1); k++) {
+			Temp[k] = Temp[k+1];
+		}
+		j--;
+	}
+	return InArray;
+}
+
+function WriteToInstructions(Feedback) {
+	document.getElementById('InstructionsDiv').innerHTML = Feedback;
+
+	RefreshImages();
+
+}
+
+
+
+Imgs = new Array();
+
+function PreloadImages(){
+	var a = PreloadImages.arguments;
+	for (var i=0; i<a.length; i++){
+		Imgs[i] = new Image();
+		Imgs[i].src = a[i];
+	}
+}
+
+function RefreshImages(){
+	for (var i=0; i<document.images.length; i++){
+		if (document.images[i].name.substring(0,6) != 'NavBar'){
+			document.images[i].src = document.images[i].src;
+		}
+	}
+}
+
+
+function EscapeDoubleQuotes(InString){
+	return InString.replace(/"/g, '&quot;')
+}
+
+function TrimString(InString){
+        var x = 0;
+
+        if (InString.length != 0) {
+                while ((InString.charAt(InString.length - 1) == '\u0020') || (InString.charAt(InString.length - 1) == '\u000A') || (InString.charAt(InString.length - 1) == '\u000D')){
+                        InString = InString.substring(0, InString.length - 1)
+                }
+
+                while ((InString.charAt(0) == '\u0020') || (InString.charAt(0) == '\u000A') || (InString.charAt(0) == '\u000D')){
+                        InString = InString.substring(1, InString.length)
+                }
+
+                while (InString.indexOf('  ') != -1) {
+                        x = InString.indexOf('  ')
+                        InString = InString.substring(0, x) + InString.substring(x+1, InString.length)
+                 }
+
+                return InString;
+        }
+
+        else {
+                return '';
+        }
+}
+
+function FindLongest(InArray){
+	if (InArray.length < 1){return -1;}
+
+	var Longest = 0;
+	for (var i=1; i<InArray.length; i++){
+		if (InArray[i].length > InArray[Longest].length){
+			Longest = i;
+		}
+	}
+	return Longest;
+}
+
+//SELECTION OBJECT FOR TYPING WITH KEYPAD
+var selObj = null;
+            
+SelObj = function(box){
+	this.box = box;
+	this.selStart = this.box.selectionStart;
+	this.selEnd = this.box.selectionEnd;
+	this.selText = this.box.value.substring(this.selStart, this.selEnd);
+	return this;
+}
+
+function setSelText(newText){
+	var caretPos = this.selStart + newText.length;
+	var newValue = this.box.value.substring(0, this.selStart);
+	newValue += newText;
+	newValue += this.box.value.substring(this.selEnd, this.box.value.length);
+	this.box.value = newValue;
+	this.box.setSelectionRange(caretPos, caretPos);
+	this.box.focus();
+}
+SelObj.prototype.setSelText = setSelText;
+
+function setSelSelectionRange(start, end){
+	this.box.setSelectionRange(start, end);
+}
+SelObj.prototype.setSelSelectionRange = setSelSelectionRange;
+
+//UNICODE CHARACTER FUNCTIONS
+function IsCombiningDiacritic(CharNum){
+	var Result = (((CharNum >= 0x0300)&&(CharNum <= 0x370))||((CharNum >= 0x20d0)&&(CharNum <= 0x20ff)));
+	Result = Result || (((CharNum >= 0x3099)&&(CharNum <= 0x309a))||((CharNum >= 0xfe20)&&(CharNum <= 0xfe23)));
+	return Result;
+}
+
+function IsCJK(CharNum){
+	return ((CharNum >= 0x3000)&&(CharNum < 0xd800));
+}
+
+//SETUP FUNCTIONS
+//BROWSER WILL REFILL TEXT BOXES FROM CACHE IF NOT PREVENTED
+function ClearTextBoxes(){
+	var NList = document.getElementsByTagName('input');
+	for (var i=0; i<NList.length; i++){
+		if ((NList[i].id.indexOf('Guess') > -1)||(NList[i].id.indexOf('Gap') > -1)){
+			NList[i].value = '';
+		}
+		if (NList[i].id.indexOf('Chk') > -1){
+			NList[i].checked = '';
+		}
+	}
+}
+
+
+
+
+
+
+
+//JQUIZ CORE JAVASCRIPT CODE
+
+var CurrQNum = 0;
+var CorrectIndicator = '<img src="correcto.gif" alt="correcto.gif" title="correcto" width="57" height="57" style="float: left;"/>';
+var IncorrectIndicator = '<img src="error.gif" alt="error.gif" title="error" width="55" height="55" style="float: left;"/>';
+var YourScoreIs = 'Tu efectividad es del ';
+
+//New for 6.2.2.0
+var CompletedSoFar = 'Preguntas contestadas hasta este punto';
+var ExerciseCompleted = 'Has terminado este examen. Para asesor&#x00ED;as escribe a: rdidacticosmusica@gmail.com';
+var ShowCompletedSoFar = true;
+
+var ContinuousScoring = true;
+var CorrectFirstTime = 'Respuestas correctas al primer intento';
+var ShowCorrectFirstTime = true;
+var ShuffleQs = false;
+var ShuffleAs = true;
+var DefaultRight = 'Correcto!';
+var DefaultWrong = 'Incorrecto ';
+var QsToShow = 14;
+var Score = 0;
+var Finished = false;
+var Qs = null;
+var QArray = new Array();
+var ShowingAllQuestions = false;
+var ShowAllQuestionsCaption = 'Mostrar todas las preguntas';
+var ShowOneByOneCaption = 'Mostrar las preguntas de una en una';
+var State = new Array();
+var Feedback = '';
+var TimeOver = false;
+var strInstructions = '';
+var Locked = false;
+
+// addition by AS
+var LinkColor = getComputedStyle(document.documentElement).getPropertyValue('--strLinkColor');
+var VLinkColor = getComputedStyle(document.documentElement).getPropertyValue('--strVLinkColor');
+// end of addition
+
+//The following variable can be used to add a message explaining that
+//the question is finished, so no further marking will take place.
+var strQuestionFinished = '';
+
+function CompleteEmptyFeedback(){
+	var QNum, ANum;
+	for (QNum=0; QNum<I.length; QNum++){
+//Only do this if not multi-select
+		if (I[QNum][2] != '3'){
+  		for (ANum = 0; ANum<I[QNum][3].length; ANum++){
+  			if (I[QNum][3][ANum][1].length < 1){
+  				if (I[QNum][3][ANum][2] > 0){
+  					I[QNum][3][ANum][1] = DefaultRight;
+  				}
+  				else{
+  					I[QNum][3][ANum][1] = DefaultWrong;
+  				}
+  			}
+  		}
+		}
+	}
+}
+
+function SetUpQuestions(){
+	var AList = new Array(); 
+	var QList = new Array();
+	var i, j;
+	Qs = document.getElementById('Questions');
+	while (Qs.getElementsByTagName('li').length > 0){
+		QList.push(Qs.removeChild(Qs.getElementsByTagName('li')[0]));
+	}
+	var DumpItem = 0;
+	if (QsToShow > QList.length){
+		QsToShow = QList.length;
+	}
+	while (QsToShow < QList.length){
+		DumpItem = Math.floor(QList.length*Math.random());
+		for (j=DumpItem; j<(QList.length-1); j++){
+			QList[j] = QList[j+1];
+		}
+		QList.length = QList.length-1;
+	}
+	if (ShuffleQs == true){
+		QList = Shuffle(QList);
+	}
+	if (ShuffleAs == true){
+		var As;
+		for (var i=0; i<QList.length; i++){
+			As = QList[i].getElementsByTagName('ol')[0];
+			if (As != null){
+  			AList.length = 0;
+				while (As.getElementsByTagName('li').length > 0){
+					AList.push(As.removeChild(As.getElementsByTagName('li')[0]));
+				}
+				AList = Shuffle(AList);
+				for (j=0; j<AList.length; j++){
+					As.appendChild(AList[j]);
+				}
+			}
+		}
+	}
+	
+	for (i=0; i<QList.length; i++){
+		Qs.appendChild(QList[i]);
+		QArray[QArray.length] = QList[i];
+	}
+
+//Show the first item
+	QArray[0].style.display = '';
+	
+//Now hide all except the first item
+	for (i=1; i<QArray.length; i++){
+		QArray[i].style.display = 'none';
+	}		
+	SetQNumReadout();
+	
+	SetFocusToTextbox();
+}
+
+function SetFocusToTextbox(){
+//if there's a textbox, set the focus in it
+	if (QArray[CurrQNum].getElementsByTagName('input')[0] != null){
+		QArray[CurrQNum].getElementsByTagName('input')[0].focus();
+//and show a keypad if there is one
+		if (document.getElementById('CharacterKeypad') != null){
+			document.getElementById('CharacterKeypad').style.display = 'block';
+		}
+	}
+	else{
+  	if (QArray[CurrQNum].getElementsByTagName('textarea')[0] != null){
+  		QArray[CurrQNum].getElementsByTagName('textarea')[0].focus();	
+//and show a keypad if there is one
+			if (document.getElementById('CharacterKeypad') != null){
+				document.getElementById('CharacterKeypad').style.display = 'block';
+			}
+		}
+//This added for 6.0.4.11: hide accented character buttons if no textbox
+		else{
+			if (document.getElementById('CharacterKeypad') != null){
+				document.getElementById('CharacterKeypad').style.display = 'none';
+			}
+		}
+	}
+}
+
+function ChangeQ(ChangeBy){
+//The following line prevents moving to another question until the current
+//question is answered correctly. Uncomment it to enable this behaviour. 
+//	if (State[CurrQNum][0] == -1){return;}
+	if (((CurrQNum + ChangeBy) < 0)||((CurrQNum + ChangeBy) >= QArray.length)){return;}
+	QArray[CurrQNum].style.display = 'none';
+	CurrQNum += ChangeBy;
+	QArray[CurrQNum].style.display = '';
+//Undocumented function added 10/12/2004
+	ShowSpecialReadingForQuestion();
+	SetQNumReadout();
+	SetFocusToTextbox();
+}
+
+var HiddenReadingShown = false;
+function ShowSpecialReadingForQuestion(){
+//Undocumented function for showing specific reading text elements which change with each question
+//Added on 10/12/2004
+	if (document.getElementById('ReadingDiv') != null){
+		if (HiddenReadingShown == true){
+			document.getElementById('ReadingDiv').innerHTML = '';
+		}
+		if (QArray[CurrQNum] != null){
+//Fix for 6.0.4.25
+			var Children = QArray[CurrQNum].getElementsByTagName('div');
+			for (var i=0; i<Children.length; i++){
+			if (Children[i].className=="HiddenReading"){
+					document.getElementById('ReadingDiv').innerHTML = Children[i].innerHTML;
+					HiddenReadingShown = true;
+//Hide the ShowAllQuestions button to avoid confusion
+					if (document.getElementById('ShowMethodButton') != null){
+						document.getElementById('ShowMethodButton').style.display = 'none';
+					}
+				}
+			}	
+		}
+	}
+}
+
+function SetQNumReadout(){
+	document.getElementById('QNumReadout').innerHTML = (CurrQNum+1) + ' / ' + QArray.length;
+	if ((CurrQNum+1) >= QArray.length){
+		if (document.getElementById('NextQButton') != null){
+			document.getElementById('NextQButton').style.visibility = 'hidden';
+		}
+	}
+	else{
+		if (document.getElementById('NextQButton') != null){
+			document.getElementById('NextQButton').style.visibility = 'visible';
+		}
+	}
+	if (CurrQNum <= 0){
+		if (document.getElementById('PrevQButton') != null){
+			document.getElementById('PrevQButton').style.visibility = 'hidden';
+		}
+	}
+	else{
+		if (document.getElementById('PrevQButton') != null){
+			document.getElementById('PrevQButton').style.visibility = 'visible';
+		}
+	}
+}
+
+var I=new Array();
+I[0]=new Array();I[0][0]=100;
+I[0][1]='';
+I[0][2]='0';
+I[0][3]=new Array();
+I[0][3][0]=new Array('<img src="S7a1.jpg" alt="S7a1.jpg" title="S7a1" width="200" height="79" style="float: center;"/>','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[0][3][1]=new Array('<img src="S7a2.jpg" alt="S7a2.jpg" title="S7a2" width="200" height="79" style="float: center;"/>','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[0][3][2]=new Array('<img src="S7a3.jpg" alt="S7a3.jpg" title="S7a3" width="200" height="79" style="float: center;"/>','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[0][3][3]=new Array('<img src="S7a4.jpg" alt="S7a4.jpg" title="S7a4" width="200" height="79" style="float: center;"/>','<img src="correcto.gif" alt="correcto.gif" title="correcto" width="62" height="62" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/> Correcto!',1,100,1);
+I[0][3][4]=new Array('<img src="S7a5.jpg" alt="S7a5.jpg" title="S7a5" width="200" height="79" style="float: center;"/>','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[1]=new Array();I[1][0]=100;
+I[1][1]='';
+I[1][2]='0';
+I[1][3]=new Array();
+I[1][3][0]=new Array('<img src="S7a1.jpg" alt="S7a1.jpg" title="S7a1" width="200" height="79" style="float: center;"/>','<img src="correcto.gif" alt="correcto.gif" title="correcto" width="62" height="62" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/> Correcto!',1,100,1);
+I[1][3][1]=new Array('<img src="S7a2.jpg" alt="S7a2.jpg" title="S7a2" width="200" height="79" style="float: center;"/>','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[1][3][2]=new Array('<img src="S7a3.jpg" alt="S7a3.jpg" title="S7a3" width="200" height="79" style="float: center;"/>','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[1][3][3]=new Array('<img src="S7a4.jpg" alt="S7a4.jpg" title="S7a4" width="200" height="79" style="float: center;"/>','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[1][3][4]=new Array('<img src="S7a5.jpg" alt="S7a5.jpg" title="S7a5" width="200" height="79" style="float: center;"/>','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[2]=new Array();I[2][0]=100;
+I[2][1]='';
+I[2][2]='0';
+I[2][3]=new Array();
+I[2][3][0]=new Array('<audio data-audio="mini"><source src="S8A1.mp3" type="audio/mp3"/></audio>','<img src="NO.gif" alt="NO.gif" title="NO" width="62" height="70" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[2][3][1]=new Array('<audio data-audio="mini"><source src="S8A2.mp3" type="audio/mp3"/></audio>','<img src="NO.gif" alt="NO.gif" title="NO" width="62" height="70" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[2][3][2]=new Array('<audio data-audio="mini"><source src="S8A3.mp3" type="audio/mp3"/></audio>','<img src="correcto.gif" alt="correcto.gif" title="correcto" width="58" height="58" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/> Correcto!',1,100,1);
+I[2][3][3]=new Array('<audio data-audio="mini"><source src="S8A4.mp3" type="audio/mp3"/></audio>','<img src="NO.gif" alt="NO.gif" title="NO" width="62" height="70" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[2][3][4]=new Array('<audio data-audio="mini"><source src="S8A5.mp3" type="audio/mp3"/></audio>','<img src="NO.gif" alt="NO.gif" title="NO" width="62" height="70" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[3]=new Array();I[3][0]=100;
+I[3][1]='';
+I[3][2]='0';
+I[3][3]=new Array();
+I[3][3][0]=new Array('<audio data-audio="mini"><source src="S8B1.mp3" type="audio/mp3"/></audio>','<img src="NO.gif" alt="NO.gif" title="NO" width="62" height="70" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[3][3][1]=new Array('<audio data-audio="mini"><source src="S8B2.mp3" type="audio/mp3"/></audio>','<img src="NO.gif" alt="NO.gif" title="NO" width="62" height="70" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[3][3][2]=new Array('<audio data-audio="mini"><source src="S8B3.mp3" type="audio/mp3"/></audio>','<img src="NO.gif" alt="NO.gif" title="NO" width="62" height="70" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[3][3][3]=new Array('<audio data-audio="mini"><source src="S8B4.mp3" type="audio/mp3"/></audio>','<img src="correcto.gif" alt="correcto.gif" title="correcto" width="58" height="58" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/> Correcto!',1,100,1);
+I[3][3][4]=new Array('<audio data-audio="mini"><source src="S8B5.mp3" type="audio/mp3"/></audio>','<img src="NO.gif" alt="NO.gif" title="NO" width="62" height="70" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[4]=new Array();I[4][0]=100;
+I[4][1]='';
+I[4][2]='0';
+I[4][3]=new Array();
+I[4][3][0]=new Array('<img src="S91.jpg" alt="S91.jpg" title="S91" width="100" height="73" style="float: center;"/>','<img src="correcto.gif" alt="correcto.gif" title="correcto" width="62" height="62" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/> Correcto!',1,100,1);
+I[4][3][1]=new Array('<img src="S92.jpg" alt="S92.jpg" title="S92" width="100" height="73" style="float: center;"/>','<img src="NO.gif" alt="NO.gif" title="NO" width="62" height="70" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[4][3][2]=new Array('<img src="S93.jpg" alt="S93.jpg" title="S93" width="100" height="73" style="float: center;"/>','<img src="NO.gif" alt="NO.gif" title="NO" width="62" height="70" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[4][3][3]=new Array('<img src="S94.jpg" alt="S94.jpg" title="S94" width="100" height="73" style="float: center;"/>','<img src="NO.gif" alt="NO.gif" title="NO" width="62" height="70" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[4][3][4]=new Array('<img src="S96.jpg" alt="S96.jpg" title="S96" width="100" height="73" style="float: center;"/>','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[5]=new Array();I[5][0]=100;
+I[5][1]='';
+I[5][2]='0';
+I[5][3]=new Array();
+I[5][3][0]=new Array('<img src="S91.jpg" alt="S91.jpg" title="S91" width="100" height="73" style="float: center;"/>','<img src="NO.gif" alt="NO.gif" title="NO" width="62" height="70" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[5][3][1]=new Array('<img src="S92.jpg" alt="S92.jpg" title="S92" width="100" height="73" style="float: center;"/>','<img src="NO.gif" alt="NO.gif" title="NO" width="62" height="70" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[5][3][2]=new Array('<img src="S93.jpg" alt="S93.jpg" title="S93" width="100" height="73" style="float: center;"/>','<img src="NO.gif" alt="NO.gif" title="NO" width="62" height="70" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[5][3][3]=new Array('<img src="S94.jpg" alt="S94.jpg" title="S94" width="100" height="73" style="float: center;"/>','<img src="NO.gif" alt="NO.gif" title="NO" width="62" height="70" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[5][3][4]=new Array('<img src="S97.jpg" alt="S97.jpg" title="S97" width="100" height="73" style="float: center;"/>','<img src="correcto.gif" alt="correcto.gif" title="correcto" width="62" height="62" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/> Correcto!',1,100,1);
+I[6]=new Array();I[6][0]=100;
+I[6][1]='';
+I[6][2]='0';
+I[6][3]=new Array();
+I[6][3][0]=new Array('<img src="Sec10A6.jpg" alt="Sec10A6.jpg" title="Sec10A6" width="547" height="68" style="float: center;"/>','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[6][3][1]=new Array('<img src="Sec10A7.jpg" alt="Sec10A7.jpg" title="Sec10A7" width="547" height="68" style="float: center;"/>','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[6][3][2]=new Array('<img src="Sec10A5.jpg" alt="Sec10A5.jpg" title="Sec10A5" width="547" height="68" style="float: center;"/>','<img src="correcto.gif" alt="correcto.gif" title="correcto" width="62" height="62" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/> Correcto!',1,100,1);
+I[6][3][3]=new Array('<img src="Sec10A8.jpg" alt="Sec10A8.jpg" title="Sec10A8" width="547" height="68" style="float: center;"/>','<img src="NO.gif" alt="NO.gif" title="NO" width="62" height="70" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[6][3][4]=new Array('<img src="Sec10A9.jpg" alt="Sec10A9.jpg" title="Sec10A9" width="547" height="68" style="float: center;"/>','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[7]=new Array();I[7][0]=100;
+I[7][1]='';
+I[7][2]='0';
+I[7][3]=new Array();
+I[7][3][0]=new Array('<img src="Sec10B3.jpg" alt="Sec10B3.jpg" title="Sec10B3" width="554" height="74" style="float: center;"/>','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[7][3][1]=new Array('<img src="Sec10B4.jpg" alt="Sec10B4.jpg" title="Sec10B4" width="554" height="74" style="float: center;"/>','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[7][3][2]=new Array('<img src="Sec10B2.jpg" alt="Sec10B2.jpg" title="Sec10B2" width="554" height="74" style="float: center;"/>','<img src="correcto.gif" alt="correcto.gif" title="correcto" width="62" height="62" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/> Correcto!',1,100,1);
+I[7][3][3]=new Array('<img src="Sec10B5.jpg" alt="Sec10B5.jpg" title="Sec10B5" width="554" height="74" style="float: center;"/>','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[7][3][4]=new Array('<img src="Sec10B6.jpg" alt="Sec10B6.jpg" title="Sec10B6" width="554" height="74" style="float: center;"/>','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[8]=new Array();I[8][0]=100;
+I[8][1]='';
+I[8][2]='0';
+I[8][3]=new Array();
+I[8][3][0]=new Array('<img src="S115.jpg" alt="S115.jpg" title="S115" width="322" height="77" style="float: center;"/>','<img src="correcto.gif" alt="correcto.gif" title="correcto" width="62" height="62" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/> Correcto!',1,100,1);
+I[8][3][1]=new Array('<img src="S114.jpg" alt="S114.jpg" title="S114" width="322" height="77" style="float: center;"/>','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[8][3][2]=new Array('<img src="S116.jpg" alt="S116.jpg" title="S116" width="322" height="77" style="float: center;"/>','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[8][3][3]=new Array('<img src="S119.jpg" alt="S119.jpg" title="S119" width="322" height="77" style="float: center;"/>','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[8][3][4]=new Array('<img src="S111.jpg" alt="S111.jpg" title="S111" width="322" height="77" style="float: center;"/>','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[9]=new Array();I[9][0]=100;
+I[9][1]='';
+I[9][2]='0';
+I[9][3]=new Array();
+I[9][3][0]=new Array('<img src="S113.jpg" alt="S113.jpg" title="S113" width="322" height="77" style="float: center;"/>','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[9][3][1]=new Array('<img src="S112.jpg" alt="S112.jpg" title="S112" width="322" height="77" style="float: center;"/>','<img src="correcto.gif" alt="correcto.gif" title="correcto" width="62" height="62" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/> Correcto!',1,100,1);
+I[9][3][2]=new Array('<img src="S115.jpg" alt="S115.jpg" title="S115" width="322" height="77" style="float: center;"/>','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[9][3][3]=new Array('<img src="S117.jpg" alt="S117.jpg" title="S117" width="322" height="77" style="float: center;"/>','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[9][3][4]=new Array('<img src="S111.jpg" alt="S111.jpg" title="S111" width="322" height="77" style="float: center;"/>','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[10]=new Array();I[10][0]=100;
+I[10][1]='';
+I[10][2]='0';
+I[10][3]=new Array();
+I[10][3][0]=new Array('Modo','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[10][3][1]=new Array('Comp\u00E1s','<img src="correcto.gif" alt="correcto.gif" title="correcto" width="62" height="62" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/> Correcto!',1,100,1);
+I[10][3][2]=new Array('Tonalidad','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[10][3][3]=new Array('Armonizaci\u00F3n o Acompa\u00F1amiento','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[10][3][4]=new Array('Articulaci\u00F3n','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[11]=new Array();I[11][0]=100;
+I[11][1]='';
+I[11][2]='0';
+I[11][3]=new Array();
+I[11][3][0]=new Array('Modo','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[11][3][1]=new Array('Comp\u00E1s','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[11][3][2]=new Array('Tonalidad','<img src="correcto.gif" alt="correcto.gif" title="correcto" width="62" height="62" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/> Correcto!',1,100,1);
+I[11][3][3]=new Array('Armonizaci\u00F3n o Acompa\u00F1amiento','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[11][3][4]=new Array('Articulaci\u00F3n','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[12]=new Array();I[12][0]=100;
+I[12][1]='';
+I[12][2]='0';
+I[12][3]=new Array();
+I[12][3][0]=new Array('Modo menor - Modo mayor - Modo menor','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[12][3][1]=new Array('Todo el fragmento est\u00E1 en modo menor','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[12][3][2]=new Array('Todo el fragmento est\u00E1 en modo mayor','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[12][3][3]=new Array('Modo mayor - Modo menor - Modo mayor','<img src="correcto.gif" alt="correcto.gif" title="correcto" width="62" height="62" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/> Correcto!',1,100,1);
+I[12][3][4]=new Array('Modo menor - Modo mayor','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[13]=new Array();I[13][0]=100;
+I[13][1]='';
+I[13][2]='0';
+I[13][3]=new Array();
+I[13][3][0]=new Array('Modo menor - Modo mayor - Modo menor','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[13][3][1]=new Array('Todo el fragmento est\u00E1 en modo menor','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[13][3][2]=new Array('Todo el fragmento est\u00E1 en modo mayor','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[13][3][3]=new Array('Modo mayor - Modo menor - Modo mayor','<img src="NO.gif" alt="NO.gif" title="NO" width="67" height="76" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>Incorrecto',0,0,1);
+I[13][3][4]=new Array('Modo menor - Modo mayor','<img src="correcto.gif" alt="correcto.gif" title="correcto" width="62" height="62" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/> Correcto!',1,100,1);
+
+
+function StartUp(){
+
+//If there's only one question, no need for question navigation controls
+	if (QsToShow < 2){
+		document.getElementById('QNav').style.display = 'none';
+	}
+	
+//Stash the instructions so they can be redisplayed
+	strInstructions = document.getElementById('InstructionsDiv').innerHTML;
+	
+
+	
+
+	
+
+	PreloadImages('correcto.gif','error.gif','S7a1.jpg','NO.gif','S7a2.jpg','S7a3.jpg','S7a4.jpg','S7a5.jpg','S91.jpg','S92.jpg','S93.jpg','S94.jpg','S96.jpg','S97.jpg','Sec10A6.jpg','Sec10A7.jpg','Sec10A5.jpg','Sec10A8.jpg','Sec10A9.jpg','Sec10B3.jpg','Sec10B4.jpg','Sec10B2.jpg','Sec10B5.jpg','Sec10B6.jpg','S115.jpg','S114.jpg','S116.jpg','S119.jpg','S111.jpg','S113.jpg','S112.jpg','S117.jpg','clock.gif','S9A.jpg','S9B.jpg');
+
+
+// addition by AS
+// AS : mini audio button
+// transformation of the audio tag with data-audio="mini"
+// into <a href="javascript:void(0);" onclick="play('mysound.mp3');"class="gloss">&#9658;</a>
+// for compatibility with the old syntax (HP v6)
+
+	var audioels = document.querySelectorAll('audio');
+	for (i = 0; i<audioels.length; i++){
+		var audioel = audioels[i];
+		// rechercher le data-audio
+		if ( audioel.hasAttribute('data-audio')) {
+			// r&#195;&#169;cup&#195;&#169;rer le nom du fichier audio
+			var sourcel = audioel.firstElementChild;// si personne n'a id&#195;&#169;e de modifier l'audio tag...
+			if(sourcel.nodeName ="source" || "SOURCE") {var srcfilename =sourcel.getAttribute('src');}
+			// definition du rempla&#195;&#167;ant
+			var lien = document.createElement("a");
+			lien.setAttribute("href","javascript:void(0);");
+			lien.setAttribute("class","gloss");
+			lien.innerHTML = "&#9658;";
+			lien.setAttribute("onclick","play('"+srcfilename+"');");
+			// remplacement
+			var audioparent = audioel.parentNode;
+			audioparent.replaceChild(lien, audioel);
+		}	
+	}
+// end of addition	
+
+	CompleteEmptyFeedback();
+
+	SetUpQuestions();
+	ClearTextBoxes();
+	CreateStatusArray();
+	
+
+	setTimeout('StartTimer()', 50);
+
+	
+//Check search string for q parameter
+	if (document.location.search.length > 0){
+		if (ShuffleQs == false){
+			var JumpTo = parseInt(document.location.search.substring(1,document.location.search.length))-1;
+			if (JumpTo <= QsToShow){
+				ChangeQ(JumpTo);
+			}
+		}
+	}
+//Undocumented function added 10/12/2004
+	ShowSpecialReadingForQuestion();
+}
+
+function ShowHideQuestions(){
+	document.getElementById('ShowMethodButton').style.display = 'none';
+	if (ShowingAllQuestions == false){
+		for (var i=0; i<QArray.length; i++){
+				QArray[i].style.display = '';
+			}
+		document.getElementById('Questions').style.listStyleType = 'decimal';
+		document.getElementById('OneByOneReadout').style.display = 'none';
+		document.getElementById('ShowMethodButton').innerHTML = ShowOneByOneCaption;
+		ShowingAllQuestions = true;
+	}
+	else{
+		for (var i=0; i<QArray.length; i++){
+				if (i != CurrQNum){
+					QArray[i].style.display = 'none';
+				}
+			}
+		document.getElementById('Questions').style.listStyleType = 'none';
+		document.getElementById('OneByOneReadout').style.display = '';
+		document.getElementById('ShowMethodButton').innerHTML = ShowAllQuestionsCaption;
+		ShowingAllQuestions = false;	
+	}
+	document.getElementById('ShowMethodButton').style.display = 'inline';
+}
+
+function CreateStatusArray(){
+	var QNum, ANum;
+//For each item in the item array
+	for (QNum=0; QNum<I.length; QNum++){
+//Check if the question still exists (hasn't been nuked by showing a random selection)
+		if (document.getElementById('Q_' + QNum) != null){
+			State[QNum] = new Array();
+			State[QNum][0] = -1; //Score for this q; -1 shows question not done yet
+			State[QNum][1] = new Array(); //answers
+			for (ANum = 0; ANum<I[QNum][3].length; ANum++){
+				State[QNum][1][ANum] = 0; //answer not chosen yet; when chosen, will store its position in the series of choices
+			}
+			State[QNum][2] = 0; //tries at this q so far
+			State[QNum][3] = 0; //incrementing percent-correct values of selected answers
+			State[QNum][4] = 0; //penalties incurred for hints
+			State[QNum][5] = ''; //Sequence of answers chosen by number
+		}
+		else{
+			State[QNum] = null;
+		}
+	}
+}
+
+
+
+function CheckMCAnswer(QNum, ANum, Btn){
+//if question doesn't exist, bail
+	if (State[QNum].length < 1){return;}
+	
+//Get the feedback
+	Feedback = I[QNum][3][ANum][1];
+	
+//Now show feedback and bail if question already complete
+	if (State[QNum][0] > -1){
+//Add an extra message explaining that the question
+// is finished if defined by the user
+		if (strQuestionFinished.length > 0){Feedback += '<br />' + strQuestionFinished;}
+//Show the feedback
+		ShowMessage(Feedback);
+//New for 6.2.2.1: If you want to mark an answer as correct even when it's the final choice, uncomment this line.
+		// modification by AS
+//		if (I[QNum][3][ANum][2] >= 1){Btn.innerHTML = CorrectIndicator; Btn.style.backgroundColor=LinkColor;}else{Btn.innerHTML = IncorrectIndicator;Btn.style.backgroundColor=VLinkColor;}	
+		return;
+	}
+	
+//Hide the button while processing
+	Btn.style.display = 'none';
+
+//Increment the number of tries
+	State[QNum][2]++;
+	
+//Add the percent-correct value of this answer
+	State[QNum][3] += I[QNum][3][ANum][3];
+	
+//Store the try number in the answer part of the State array, for tracking purposes
+	State[QNum][1][ANum] = State[QNum][2];
+	if (State[QNum][5].length > 0){State[QNum][5] += ' | ';}
+	State[QNum][5] += String.fromCharCode(65+ANum);
+	
+//Should this answer be accepted as correct?
+	if (I[QNum][3][ANum][2] < 1){
+//It's wrong
+
+//Mark the answer
+		Btn.innerHTML = IncorrectIndicator;
+		// addition by AS
+		// color not taken in account for &#226;&#339;&#732; on touch devices
+		//Btn.style.color=VLinkColor;
+		Btn.style.backgroundColor=VLinkColor;
+		
+//Remove any previous score unless exercise is finished (6.0.3.8+)
+		if (Finished == false){
+			WriteToInstructions(strInstructions);
+		}	
+		
+//Check whether this leaves just one MC answer unselected, in which case the Q is terminated
+		var RemainingAnswer = FinalAnswer(QNum);
+		if (RemainingAnswer > -1){
+//Behave as if the last answer had been selected, but give no credit for it
+//Increment the number of tries
+			State[QNum][2]++;		
+		
+//Calculate the score for this question
+			CalculateMCQuestionScore(QNum);
+			
+//Get the overall score and add it to the feedback
+			CalculateOverallScore();
+//New for 6.2.2.1
+			var QsDone = CheckQuestionsCompleted();
+			if ((ContinuousScoring == true)||(Finished == true)){
+				Feedback += '<br />' + YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone;
+				WriteToInstructions(YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone);
+			}
+			else{
+				WriteToInstructions(QsDone);
+			}
+		}
+	}
+	else{
+//It's right
+//Mark the answer
+		Btn.innerHTML = CorrectIndicator;
+		// addition by AS
+		// color not taken in account for &#226;&#339;&#8221; on touch devices
+		//Btn.style.color=LinkColor;
+		Btn.style.backgroundColor=LinkColor;
+				
+//Calculate the score for this question
+		CalculateMCQuestionScore(QNum);
+		
+//New for 6.2.2.0
+		var QsDone = CheckQuestionsCompleted();
+
+//Get the overall score and add it to the feedback
+		if (ContinuousScoring == true){
+			CalculateOverallScore();
+			if ((ContinuousScoring == true)||(Finished == true)){
+				Feedback += '<br />' + YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone;
+				WriteToInstructions(YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone);
+			}
+		}
+		else{
+			WriteToInstructions(QsDone);
+		}
+	}
+	
+//Show the button again
+	Btn.style.display = 'inline';
+	
+//Finally, show the feedback	
+	ShowMessage(Feedback);
+	
+//Check whether all questions are now done
+	CheckFinished();
+}
+
+function CalculateMCQuestionScore(QNum){
+	var Tries = State[QNum][2] + State[QNum][4]; //include tries and hint penalties
+	var PercentCorrect = State[QNum][3];
+	var TotAns = GetTotalMCAnswers(QNum);
+	var HintPenalties = State[QNum][4];
+	
+//Make sure it's not already complete
+
+	if (State[QNum][0] < 0){
+//Allow for Hybrids
+		if (HintPenalties >= 1){
+			State[QNum][0] = 0;
+		}
+		else{
+//This line calculates the score for this question
+			if (TotAns == 1){
+				State[QNum][0] = 1;
+			}
+			else{
+				State[QNum][0] = ((TotAns-((Tries*100)/State[QNum][3]))/(TotAns-1));
+			}
+		}
+//Fix for Safari bug added for version 6.0.3.42 (negative infinity problem)
+		if ((State[QNum][0] < 0)||(State[QNum][0] == Number.NEGATIVE_INFINITY)){
+			State[QNum][0] = 0;
+		}
+	}
+}
+
+function GetTotalMCAnswers(QNum){
+	var Result = 0;
+	for (var ANum=0; ANum<I[QNum][3].length; ANum++){
+		if (I[QNum][3][ANum][4] == 1){ //This is an MC answer
+			Result++;
+		}
+	}
+	return Result;
+}
+
+function FinalAnswer(QNum){
+	var UnchosenAnswers = 0;
+	var FinalAnswer = -1;
+	for (var ANum=0; ANum<I[QNum][3].length; ANum++){
+		if (I[QNum][3][ANum][4] == 1){ //This is an MC answer
+			if (State[QNum][1][ANum] < 1){ //This answer hasn't been chosen yet
+				UnchosenAnswers++;
+				FinalAnswer = ANum;
+			}
+		}
+	}
+	if (UnchosenAnswers == 1){
+		return FinalAnswer;
+	}
+	else{
+		return -1;
+	}
+}
+
+
+
+
+
+function CalculateOverallScore(){
+	var TotalWeighting = 0;
+	var TotalScore = 0;
+	
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] > -1){
+				TotalWeighting += I[QNum][0];
+				TotalScore += (I[QNum][0] * State[QNum][0]);
+			}
+		}
+	}
+	if (TotalWeighting > 0){
+		Score = Math.floor((TotalScore/TotalWeighting)*100);
+	}
+	else{
+//if TotalWeighting is 0, no questions so far have any value, so 
+//no penalty should be shown.
+		Score = 100; 
+	}
+}
+
+//New for 6.2.2.0
+function CheckQuestionsCompleted(){
+	if (ShowCompletedSoFar == false){return '';}
+	var QsCompleted = 0;
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] >= 0){
+				QsCompleted++;
+			}
+		}
+	}
+//Fixes for 6.2.2.2
+	if (QsCompleted >= QArray.length){
+		return ExerciseCompleted;
+	}
+	else{
+		return CompletedSoFar + ' ' + QsCompleted + '/' + QArray.length + '.';
+	}
+}
+
+function CheckFinished(){
+	var FB = '';
+	var AllDone = true;
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] < 0){
+				AllDone = false;
+			}
+		}
+	}
+	if (AllDone == true){
+	
+//Report final score and submit if necessary
+		CalculateOverallScore();
+		FB = YourScoreIs + ' ' + Score + '%.';
+		if (ShowCorrectFirstTime == true){
+			var CFT = 0;
+			for (QNum=0; QNum<State.length; QNum++){
+				if (State[QNum] != null){
+					if (State[QNum][0] >= 1){
+						CFT++;
+					}
+				}
+			}
+			FB += '<br />' + CorrectFirstTime + ' ' + CFT + '/' + QsToShow;
+		}
+		
+//New for 6.2.2.0
+		FB += '<br />' + ExerciseCompleted;
+		
+		WriteToInstructions(FB);
+		
+		Finished == true;
+
+		window.clearInterval(Interval);
+
+
+
+
+		TimeOver = true;
+		Locked = true;
+		
+
+
+		Finished = true;
+		Detail = '<?xml version="1.0"?><hpnetresult><fields>';
+		for (QNum=0; QNum<State.length; QNum++){
+			if (State[QNum] != null){
+				if (State[QNum][5].length > 0){
+					Detail += '<field><fieldname>Question #' + (QNum+1) + '</fieldname><fieldtype>question-tracking</fieldtype><fieldlabel>Q ' + (QNum+1) + '</fieldlabel><fieldlabelid>QuestionTrackingField</fieldlabelid><fielddata>' + State[QNum][5] + '</fielddata></field>';
+				}
+			}
+		}
+		Detail += '</fields></hpnetresult>';
+	}
+
+}
+
+
+function TimesUp(){
+	document.getElementById('Timer').innerHTML = 'Se agot&#x00F3; el tiempo <img src="clock.gif" alt="clock.gif" title="clock" width="197" height="196" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>';
+
+	RefreshImages();
+
+	TimeOver = true;
+	Finished = true;
+	ShowMessage('Se agot&#x00F3; el tiempo <img src="clock.gif" alt="clock.gif" title="clock" width="197" height="196" style="display: block; margin-left: auto; margin-right: auto; text-align: center;"/>');
+	
+//Set all remaining scores to 0
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] < 0){
+				State[QNum][0] = 0;
+			}
+		}
+	}
+	CheckFinished();
+}
+
+
+
+
+
+
+
+
+//CODE FOR HANDLING TIMER
+//Timer code
+var Seconds = 1500;
+var Interval = null;
+
+function StartTimer(){
+	Interval = window.setInterval('DownTime()',1000);
+	document.getElementById('TimerText').style.display = 'inline';
+}
+
+function DownTime(){
+	var ss = Seconds % 60;
+	if (ss<10){
+		ss='0' + ss + '';
+	}
+
+	var mm = Math.floor(Seconds / 60);
+
+	if (document.getElementById('Timer') == null){
+		return;
+	}
+
+	document.getElementById('TimerText').innerHTML = mm + ':' + ss;
+	if (Seconds < 1){
+		window.clearInterval(Interval);
+		TimeOver = true;
+		TimesUp();
+	}
+	Seconds--;
+}
+
+
+
+
+
+
+//-->
+
+//]]>
+
+</script>
+
+
+</head>
+
+<body onload="StartUp()" id="TheBody" >
+
+<!-- BeginTopNavButtons -->
+
+<!-- added by AS -->
+<!-- Stan Bogdanov - Hiding the audio player  -->
+		<div id="hiddenPlayer" style="height:0px;"></div>
+<!-- end of addition by AS -->
+
+
+
+<!-- EndTopNavButtons -->
+
+<div class="Titles">
+	<h2 class="ExerciseTitle">Aptitudes Musicales Generales (AMG) parte 2de2</h2>
+
+
+<div id="Timer"><span id="TimerText">&#160;&#160;</span></div>
+
+
+</div>
+
+<div id="InstructionsDiv" class="StdDiv">
+	<div id="Instructions"><audio data-audio="mini"><source src="PresentacionAMG.mp3" type="audio/mp3"/></audio><br /><br />Para contestar da clic en los recuadros que tienen signo de interrogaci&#x00F3;n.</div>
+</div>
+
+
+<div id="ContainerDiv">
+
+
+
+<div class="ExerciseContainer">
+
+<div id="QNav" class="QuestionNavigation">
+
+<p style="text-align: right;">
+<button id="ShowMethodButton" class="FuncButton" onclick="ShowHideQuestions(); return false;">Mostrar todas las preguntas</button>
+</p>
+
+<div id="OneByOneReadout">
+<button id="PrevQButton" class="FuncButton" onclick="ChangeQ(-1); return false;">&lt;=</button>
+
+<span id="QNumReadout" class="QNum">&#160;</span>
+
+<button id="NextQButton" class="FuncButton" onclick="ChangeQ(1); return false;">=&gt;</button>
+<br />
+</div>
+
+</div>
+ 
+<ol class="QuizQuestions" id="Questions">
+<li class="QuizQuestion" id="Q_0" style="display: none;"><div class="QuestionText">Secci&#x00F3;n 7 AN&#x00C1;LISIS DE LA ALTURA DEL SONIDO<br /><br />Despu&#x00E9;s de escuchar el modelo mel&#x00F3;dico compara lo que escuchaste con las 5 im&#x00E1;genes. Elige la que corresponda al movimiento de los sonidos escuchados.<br /><br />Ejercicio A<br /><br />Da clic para escuchar el modelo mel&#x00F3;dico.<br /><br /><audio controls="controls"><source src="S7A.mp3" type="audio/mp3"/><br /><a href="S7A.mp3" title="S7A.mp3">S7A.mp3</a><br /></audio> <br /><br />Elige la opci&#x00F3;n que corresponda al movimiento de los sonidos escuchados.</div><ol class="MCAnswers"><li id="Q_0_0"><button class="FuncButton" id="Q_0_0_Btn" onclick="CheckMCAnswer(0,0,this)">?</button>&#160;&#160;<img src="S7a1.jpg" alt="S7a1.jpg" title="S7a1" width="200" height="79" style="float: center;"/></li><li id="Q_0_1"><button class="FuncButton" id="Q_0_1_Btn" onclick="CheckMCAnswer(0,1,this)">?</button>&#160;&#160;<img src="S7a2.jpg" alt="S7a2.jpg" title="S7a2" width="200" height="79" style="float: center;"/></li><li id="Q_0_2"><button class="FuncButton" id="Q_0_2_Btn" onclick="CheckMCAnswer(0,2,this)">?</button>&#160;&#160;<img src="S7a3.jpg" alt="S7a3.jpg" title="S7a3" width="200" height="79" style="float: center;"/></li><li id="Q_0_3"><button class="FuncButton" id="Q_0_3_Btn" onclick="CheckMCAnswer(0,3,this)">?</button>&#160;&#160;<img src="S7a4.jpg" alt="S7a4.jpg" title="S7a4" width="200" height="79" style="float: center;"/></li><li id="Q_0_4"><button class="FuncButton" id="Q_0_4_Btn" onclick="CheckMCAnswer(0,4,this)">?</button>&#160;&#160;<img src="S7a5.jpg" alt="S7a5.jpg" title="S7a5" width="200" height="79" style="float: center;"/></li></ol></li>
+<li class="QuizQuestion" id="Q_1" style="display: none;"><div class="QuestionText">Secci&#x00F3;n 7 AN&#x00C1;LISIS DE LA ALTURA DEL SONIDO<br /><br />Despu&#x00E9;s de escuchar el modelo mel&#x00F3;dico compara lo que escuchaste con las 5 im&#x00E1;genes. Elige la que corresponda al movimiento de los sonidos escuchados.<br /><br />Ejercicio B<br /><br />Da clic para escuchar el modelo mel&#x00F3;dico.<br /><br /><audio controls="controls"><source src="S7B.mp3" type="audio/mp3"/><br /><a href="S7B.mp3" title="S7B.mp3">S7B.mp3</a><br /></audio> <br /><br />Elige la opci&#x00F3;n que corresponda al movimiento de los sonidos escuchados.</div><ol class="MCAnswers"><li id="Q_1_0"><button class="FuncButton" id="Q_1_0_Btn" onclick="CheckMCAnswer(1,0,this)">?</button>&#160;&#160;<img src="S7a1.jpg" alt="S7a1.jpg" title="S7a1" width="200" height="79" style="float: center;"/></li><li id="Q_1_1"><button class="FuncButton" id="Q_1_1_Btn" onclick="CheckMCAnswer(1,1,this)">?</button>&#160;&#160;<img src="S7a2.jpg" alt="S7a2.jpg" title="S7a2" width="200" height="79" style="float: center;"/></li><li id="Q_1_2"><button class="FuncButton" id="Q_1_2_Btn" onclick="CheckMCAnswer(1,2,this)">?</button>&#160;&#160;<img src="S7a3.jpg" alt="S7a3.jpg" title="S7a3" width="200" height="79" style="float: center;"/></li><li id="Q_1_3"><button class="FuncButton" id="Q_1_3_Btn" onclick="CheckMCAnswer(1,3,this)">?</button>&#160;&#160;<img src="S7a4.jpg" alt="S7a4.jpg" title="S7a4" width="200" height="79" style="float: center;"/></li><li id="Q_1_4"><button class="FuncButton" id="Q_1_4_Btn" onclick="CheckMCAnswer(1,4,this)">?</button>&#160;&#160;<img src="S7a5.jpg" alt="S7a5.jpg" title="S7a5" width="200" height="79" style="float: center;"/></li></ol></li>
+<li class="QuizQuestion" id="Q_2" style="display: none;"><div class="QuestionText">Secci&#x00F3;n 8 RETENCI&#x00D3;N DE SECUENCIAS DE ACORDES<br /><br />Escucha el modelo, posteriormente escucha las opciones, en &#x00E9;stas puede haber alg&#x00FA;n acorde diferente a la secuencia original o modelo. Elige la opci&#x00F3;n que sea id&#x00E9;ntica al modelo.<br /><br />Ejercicio A<br /><br />Da clic para escuchar el modelo<br /><br /><audio controls="controls"><source src="S8Amodelo.mp3" type="audio/mp3"/><br /><a href="S8Amodelo.mp3" title="S8Amodelo.mp3">S8Amodelo.mp3</a><br /></audio> <br /><br />Elige la opci&#x00F3;n que sea id&#x00E9;ntica al modelo</div><ol class="MCAnswers"><li id="Q_2_0"><button class="FuncButton" id="Q_2_0_Btn" onclick="CheckMCAnswer(2,0,this)">?</button>&#160;&#160;<audio data-audio="mini"><source src="S8A1.mp3" type="audio/mp3"/></audio></li><li id="Q_2_1"><button class="FuncButton" id="Q_2_1_Btn" onclick="CheckMCAnswer(2,1,this)">?</button>&#160;&#160;<audio data-audio="mini"><source src="S8A2.mp3" type="audio/mp3"/></audio></li><li id="Q_2_2"><button class="FuncButton" id="Q_2_2_Btn" onclick="CheckMCAnswer(2,2,this)">?</button>&#160;&#160;<audio data-audio="mini"><source src="S8A3.mp3" type="audio/mp3"/></audio></li><li id="Q_2_3"><button class="FuncButton" id="Q_2_3_Btn" onclick="CheckMCAnswer(2,3,this)">?</button>&#160;&#160;<audio data-audio="mini"><source src="S8A4.mp3" type="audio/mp3"/></audio></li><li id="Q_2_4"><button class="FuncButton" id="Q_2_4_Btn" onclick="CheckMCAnswer(2,4,this)">?</button>&#160;&#160;<audio data-audio="mini"><source src="S8A5.mp3" type="audio/mp3"/></audio></li></ol></li>
+<li class="QuizQuestion" id="Q_3" style="display: none;"><div class="QuestionText">Secci&#x00F3;n 8 RETENCI&#x00D3;N DE SECUENCIAS DE ACORDES<br /><br />Escucha el modelo, posteriormente escucha las opciones, en &#x00E9;stas puede haber alg&#x00FA;n acorde diferente a la secuencia original o modelo. Elige la opci&#x00F3;n que sea id&#x00E9;ntica al modelo.<br /><br />Ejercicio B<br /><br />Da clic para escuchar el modelo<br /><br /><audio controls="controls"><source src="S8Bmodelo.mp3" type="audio/mp3"/><br /><a href="S8Bmodelo.mp3" title="S8Bmodelo.mp3">S8Bmodelo.mp3</a><br /></audio> <br /><br />Elige la opci&#x00F3;n que sea id&#x00E9;ntica al modelo</div><ol class="MCAnswers"><li id="Q_3_0"><button class="FuncButton" id="Q_3_0_Btn" onclick="CheckMCAnswer(3,0,this)">?</button>&#160;&#160;<audio data-audio="mini"><source src="S8B1.mp3" type="audio/mp3"/></audio></li><li id="Q_3_1"><button class="FuncButton" id="Q_3_1_Btn" onclick="CheckMCAnswer(3,1,this)">?</button>&#160;&#160;<audio data-audio="mini"><source src="S8B2.mp3" type="audio/mp3"/></audio></li><li id="Q_3_2"><button class="FuncButton" id="Q_3_2_Btn" onclick="CheckMCAnswer(3,2,this)">?</button>&#160;&#160;<audio data-audio="mini"><source src="S8B3.mp3" type="audio/mp3"/></audio></li><li id="Q_3_3"><button class="FuncButton" id="Q_3_3_Btn" onclick="CheckMCAnswer(3,3,this)">?</button>&#160;&#160;<audio data-audio="mini"><source src="S8B4.mp3" type="audio/mp3"/></audio></li><li id="Q_3_4"><button class="FuncButton" id="Q_3_4_Btn" onclick="CheckMCAnswer(3,4,this)">?</button>&#160;&#160;<audio data-audio="mini"><source src="S8B5.mp3" type="audio/mp3"/></audio></li></ol></li>
+<li class="QuizQuestion" id="Q_4" style="display: none;"><div class="QuestionText">Secci&#x00F3;n 9 AN&#x00C1;LISIS DE COMPASES ESCRITOS.<br /><br />Elige la figura de nota o de silencio que complete correctamente el comp&#x00E1;s.<br /><br />Ejercicio A<br /><br /><img src="S9A.jpg" alt="S9A.jpg" title="S9A" width="340" height="98" style="float: center;"/></div><ol class="MCAnswers"><li id="Q_4_0"><button class="FuncButton" id="Q_4_0_Btn" onclick="CheckMCAnswer(4,0,this)">?</button>&#160;&#160;<img src="S91.jpg" alt="S91.jpg" title="S91" width="100" height="73" style="float: center;"/></li><li id="Q_4_1"><button class="FuncButton" id="Q_4_1_Btn" onclick="CheckMCAnswer(4,1,this)">?</button>&#160;&#160;<img src="S92.jpg" alt="S92.jpg" title="S92" width="100" height="73" style="float: center;"/></li><li id="Q_4_2"><button class="FuncButton" id="Q_4_2_Btn" onclick="CheckMCAnswer(4,2,this)">?</button>&#160;&#160;<img src="S93.jpg" alt="S93.jpg" title="S93" width="100" height="73" style="float: center;"/></li><li id="Q_4_3"><button class="FuncButton" id="Q_4_3_Btn" onclick="CheckMCAnswer(4,3,this)">?</button>&#160;&#160;<img src="S94.jpg" alt="S94.jpg" title="S94" width="100" height="73" style="float: center;"/></li><li id="Q_4_4"><button class="FuncButton" id="Q_4_4_Btn" onclick="CheckMCAnswer(4,4,this)">?</button>&#160;&#160;<img src="S96.jpg" alt="S96.jpg" title="S96" width="100" height="73" style="float: center;"/></li></ol></li>
+<li class="QuizQuestion" id="Q_5" style="display: none;"><div class="QuestionText">Secci&#x00F3;n 9 AN&#x00C1;LISIS DE COMPASES ESCRITOS.<br /><br />Elige la figura de nota o de silencio que complete correctamente el comp&#x00E1;s.<br /><br />Ejercicio B<br /><br /><img src="S9B.jpg" alt="S9B.jpg" title="S9B" width="360" height="104" style="float: center;"/></div><ol class="MCAnswers"><li id="Q_5_0"><button class="FuncButton" id="Q_5_0_Btn" onclick="CheckMCAnswer(5,0,this)">?</button>&#160;&#160;<img src="S91.jpg" alt="S91.jpg" title="S91" width="100" height="73" style="float: center;"/></li><li id="Q_5_1"><button class="FuncButton" id="Q_5_1_Btn" onclick="CheckMCAnswer(5,1,this)">?</button>&#160;&#160;<img src="S92.jpg" alt="S92.jpg" title="S92" width="100" height="73" style="float: center;"/></li><li id="Q_5_2"><button class="FuncButton" id="Q_5_2_Btn" onclick="CheckMCAnswer(5,2,this)">?</button>&#160;&#160;<img src="S93.jpg" alt="S93.jpg" title="S93" width="100" height="73" style="float: center;"/></li><li id="Q_5_3"><button class="FuncButton" id="Q_5_3_Btn" onclick="CheckMCAnswer(5,3,this)">?</button>&#160;&#160;<img src="S94.jpg" alt="S94.jpg" title="S94" width="100" height="73" style="float: center;"/></li><li id="Q_5_4"><button class="FuncButton" id="Q_5_4_Btn" onclick="CheckMCAnswer(5,4,this)">?</button>&#160;&#160;<img src="S97.jpg" alt="S97.jpg" title="S97" width="100" height="73" style="float: center;"/></li></ol></li>
+<li class="QuizQuestion" id="Q_6" style="display: none;"><div class="QuestionText">Secci&#x00F3;n 10 AN&#x00C1;LISIS DE SECUENCIAS R&#x00CD;TMICAS<br /><br />Despu&#x00E9;s de escuchar la secuencia r&#x00ED;tmica elige la opci&#x00F3;n que represente correctamente lo escuchado.<br /><br />Ejercicio A<br /><br />Da clic para escuchar la secuencia r&#x00ED;tmica.<br /><br /><audio controls="controls"><source src="Secc10A.mp3" type="audio/mp3"/><br /><a href="Secc10A.mp3" title="Secc10A.mp3">Secc10A.mp3</a><br /></audio> <br /><br />Elige la opci&#x00F3;n que represente correctamente la secuencia r&#x00ED;tmica escuchada.</div><ol class="MCAnswers"><li id="Q_6_0"><button class="FuncButton" id="Q_6_0_Btn" onclick="CheckMCAnswer(6,0,this)">?</button>&#160;&#160;<img src="Sec10A6.jpg" alt="Sec10A6.jpg" title="Sec10A6" width="547" height="68" style="float: center;"/></li><li id="Q_6_1"><button class="FuncButton" id="Q_6_1_Btn" onclick="CheckMCAnswer(6,1,this)">?</button>&#160;&#160;<img src="Sec10A7.jpg" alt="Sec10A7.jpg" title="Sec10A7" width="547" height="68" style="float: center;"/></li><li id="Q_6_2"><button class="FuncButton" id="Q_6_2_Btn" onclick="CheckMCAnswer(6,2,this)">?</button>&#160;&#160;<img src="Sec10A5.jpg" alt="Sec10A5.jpg" title="Sec10A5" width="547" height="68" style="float: center;"/></li><li id="Q_6_3"><button class="FuncButton" id="Q_6_3_Btn" onclick="CheckMCAnswer(6,3,this)">?</button>&#160;&#160;<img src="Sec10A8.jpg" alt="Sec10A8.jpg" title="Sec10A8" width="547" height="68" style="float: center;"/></li><li id="Q_6_4"><button class="FuncButton" id="Q_6_4_Btn" onclick="CheckMCAnswer(6,4,this)">?</button>&#160;&#160;<img src="Sec10A9.jpg" alt="Sec10A9.jpg" title="Sec10A9" width="547" height="68" style="float: center;"/></li></ol></li>
+<li class="QuizQuestion" id="Q_7" style="display: none;"><div class="QuestionText">Secci&#x00F3;n 10 AN&#x00C1;LISIS DE SECUENCIAS R&#x00CD;TMICAS<br /><br />Despu&#x00E9;s de escuchar la secuencia r&#x00ED;tmica elige la opci&#x00F3;n que represente correctamente lo escuchado.<br /><br />Ejercicio B<br /><br />Da clic para escuchar la secuencia r&#x00ED;tmica.<br /><br /><audio controls="controls"><source src="Secc10B.mp3" type="audio/mp3"/><br /><a href="Secc10B.mp3" title="Secc10B.mp3">Secc10B.mp3</a><br /></audio> <br /><br />Elige la opci&#x00F3;n que represente correctamente la secuencia r&#x00ED;tmica escuchada.</div><ol class="MCAnswers"><li id="Q_7_0"><button class="FuncButton" id="Q_7_0_Btn" onclick="CheckMCAnswer(7,0,this)">?</button>&#160;&#160;<img src="Sec10B3.jpg" alt="Sec10B3.jpg" title="Sec10B3" width="554" height="74" style="float: center;"/></li><li id="Q_7_1"><button class="FuncButton" id="Q_7_1_Btn" onclick="CheckMCAnswer(7,1,this)">?</button>&#160;&#160;<img src="Sec10B4.jpg" alt="Sec10B4.jpg" title="Sec10B4" width="554" height="74" style="float: center;"/></li><li id="Q_7_2"><button class="FuncButton" id="Q_7_2_Btn" onclick="CheckMCAnswer(7,2,this)">?</button>&#160;&#160;<img src="Sec10B2.jpg" alt="Sec10B2.jpg" title="Sec10B2" width="554" height="74" style="float: center;"/></li><li id="Q_7_3"><button class="FuncButton" id="Q_7_3_Btn" onclick="CheckMCAnswer(7,3,this)">?</button>&#160;&#160;<img src="Sec10B5.jpg" alt="Sec10B5.jpg" title="Sec10B5" width="554" height="74" style="float: center;"/></li><li id="Q_7_4"><button class="FuncButton" id="Q_7_4_Btn" onclick="CheckMCAnswer(7,4,this)">?</button>&#160;&#160;<img src="Sec10B6.jpg" alt="Sec10B6.jpg" title="Sec10B6" width="554" height="74" style="float: center;"/></li></ol></li>
+<li class="QuizQuestion" id="Q_8" style="display: none;"><div class="QuestionText">Secci&#x00F3;n 11 AN&#x00C1;LISIS DE SECUENCIAS MEL&#x00D3;DICAS<br /><br />Despu&#x00E9;s de escuchar el modelo mel&#x00F3;dico compara lo que escuchaste con las 5 opciones de escritura. Elige la opci&#x00F3;n que corresponda a la secuencia escuchada.<br /><br />Ejercicio A<br /><br />Da clic para escuchar el modelo mel&#x00F3;dico.<br /><br /><audio controls="controls"><source src="S11A.mp3" type="audio/mp3"/><br /><a href="S11A.mp3" title="S11A.mp3">S11A.mp3</a><br /></audio> <br /><br />Elige la opci&#x00F3;n que corresponda a la melod&#x00ED;a escuchada.</div><ol class="MCAnswers"><li id="Q_8_0"><button class="FuncButton" id="Q_8_0_Btn" onclick="CheckMCAnswer(8,0,this)">?</button>&#160;&#160;<img src="S115.jpg" alt="S115.jpg" title="S115" width="322" height="77" style="float: center;"/></li><li id="Q_8_1"><button class="FuncButton" id="Q_8_1_Btn" onclick="CheckMCAnswer(8,1,this)">?</button>&#160;&#160;<img src="S114.jpg" alt="S114.jpg" title="S114" width="322" height="77" style="float: center;"/></li><li id="Q_8_2"><button class="FuncButton" id="Q_8_2_Btn" onclick="CheckMCAnswer(8,2,this)">?</button>&#160;&#160;<img src="S116.jpg" alt="S116.jpg" title="S116" width="322" height="77" style="float: center;"/></li><li id="Q_8_3"><button class="FuncButton" id="Q_8_3_Btn" onclick="CheckMCAnswer(8,3,this)">?</button>&#160;&#160;<img src="S119.jpg" alt="S119.jpg" title="S119" width="322" height="77" style="float: center;"/></li><li id="Q_8_4"><button class="FuncButton" id="Q_8_4_Btn" onclick="CheckMCAnswer(8,4,this)">?</button>&#160;&#160;<img src="S111.jpg" alt="S111.jpg" title="S111" width="322" height="77" style="float: center;"/></li></ol></li>
+<li class="QuizQuestion" id="Q_9" style="display: none;"><div class="QuestionText">Secci&#x00F3;n 11 AN&#x00C1;LISIS DE SECUENCIAS MEL&#x00D3;DICAS<br /><br />Despu&#x00E9;s de escuchar el modelo mel&#x00F3;dico compara lo que escuchaste con las 5 opciones de escritura. Elige la opci&#x00F3;n que corresponda a la secuencia escuchada.<br /><br />Ejercicio B<br /><br />Da clic para escuchar el modelo mel&#x00F3;dico.<br /><br /><audio controls="controls"><source src="S11B.mp3" type="audio/mp3"/><br /><a href="S11B.mp3" title="S11B.mp3">S11B.mp3</a><br /></audio> <br /><br />Elige la opci&#x00F3;n que corresponda a la melod&#x00ED;a escuchada.</div><ol class="MCAnswers"><li id="Q_9_0"><button class="FuncButton" id="Q_9_0_Btn" onclick="CheckMCAnswer(9,0,this)">?</button>&#160;&#160;<img src="S113.jpg" alt="S113.jpg" title="S113" width="322" height="77" style="float: center;"/></li><li id="Q_9_1"><button class="FuncButton" id="Q_9_1_Btn" onclick="CheckMCAnswer(9,1,this)">?</button>&#160;&#160;<img src="S112.jpg" alt="S112.jpg" title="S112" width="322" height="77" style="float: center;"/></li><li id="Q_9_2"><button class="FuncButton" id="Q_9_2_Btn" onclick="CheckMCAnswer(9,2,this)">?</button>&#160;&#160;<img src="S115.jpg" alt="S115.jpg" title="S115" width="322" height="77" style="float: center;"/></li><li id="Q_9_3"><button class="FuncButton" id="Q_9_3_Btn" onclick="CheckMCAnswer(9,3,this)">?</button>&#160;&#160;<img src="S117.jpg" alt="S117.jpg" title="S117" width="322" height="77" style="float: center;"/></li><li id="Q_9_4"><button class="FuncButton" id="Q_9_4_Btn" onclick="CheckMCAnswer(9,4,this)">?</button>&#160;&#160;<img src="S111.jpg" alt="S111.jpg" title="S111" width="322" height="77" style="float: center;"/></li></ol></li>
+<li class="QuizQuestion" id="Q_10" style="display: none;"><div class="QuestionText">Secci&#x00F3;n 12 VARIACIONES DE MODO, ARTICULACI&#x00D3;N, COMP&#x00C1;S, TONALIDAD Y ARMONIZACI&#x00D3;N.<br />Ejercicio A<br />Despu&#x00E9;s de escuchar el modelo, escucha la variaci&#x00F3;n e indica cu&#x00E1;l de los elementos principalmente ha variado.<br /><br />Da clic para escuchar el modelo.<br /><br /><audio controls="controls"><source src="S12modelo.mp3" type="audio/mp3"/><br /><a href="S12modelo.mp3" title="S12modelo.mp3">S12modelo.mp3</a><br /></audio> <br /><br />Da clic para escuchar la variaci&#x00F3;n<br /><audio data-audio="mini"><source src="S12var1.mp3" type="audio/mp3"/></audio><br /><br />&#x00BF;Qu&#x00E9; elemento principalmente ha variado?</div><ol class="MCAnswers"><li id="Q_10_0"><button class="FuncButton" id="Q_10_0_Btn" onclick="CheckMCAnswer(10,0,this)">?</button>&#160;&#160;Modo</li><li id="Q_10_1"><button class="FuncButton" id="Q_10_1_Btn" onclick="CheckMCAnswer(10,1,this)">?</button>&#160;&#160;Comp&#x00E1;s</li><li id="Q_10_2"><button class="FuncButton" id="Q_10_2_Btn" onclick="CheckMCAnswer(10,2,this)">?</button>&#160;&#160;Tonalidad</li><li id="Q_10_3"><button class="FuncButton" id="Q_10_3_Btn" onclick="CheckMCAnswer(10,3,this)">?</button>&#160;&#160;Armonizaci&#x00F3;n o Acompa&#x00F1;amiento</li><li id="Q_10_4"><button class="FuncButton" id="Q_10_4_Btn" onclick="CheckMCAnswer(10,4,this)">?</button>&#160;&#160;Articulaci&#x00F3;n</li></ol></li>
+<li class="QuizQuestion" id="Q_11" style="display: none;"><div class="QuestionText">Secci&#x00F3;n 12 VARIACIONES DE MODO, ARTICULACI&#x00D3;N, COMP&#x00C1;S, TONALIDAD Y ARMONIZACI&#x00D3;N.<br />Ejercicio B<br />Despu&#x00E9;s de escuchar el modelo, escucha la variaci&#x00F3;n e indica cu&#x00E1;l de los elementos principalmente ha variado.<br /><br />Da clic para escuchar el modelo.<br /><br /><audio controls="controls"><source src="S12modeloB.mp3" type="audio/mp3"/><br /><a href="S12modeloB.mp3" title="S12modeloB.mp3">S12modeloB.mp3</a><br /></audio> <br /><br />Da clic para escuchar la variaci&#x00F3;n<br /><audio data-audio="mini"><source src="S12B5.mp3" type="audio/mp3"/></audio><br /><br />&#x00BF;Qu&#x00E9; elemento principalmente ha variado?</div><ol class="MCAnswers"><li id="Q_11_0"><button class="FuncButton" id="Q_11_0_Btn" onclick="CheckMCAnswer(11,0,this)">?</button>&#160;&#160;Modo</li><li id="Q_11_1"><button class="FuncButton" id="Q_11_1_Btn" onclick="CheckMCAnswer(11,1,this)">?</button>&#160;&#160;Comp&#x00E1;s</li><li id="Q_11_2"><button class="FuncButton" id="Q_11_2_Btn" onclick="CheckMCAnswer(11,2,this)">?</button>&#160;&#160;Tonalidad</li><li id="Q_11_3"><button class="FuncButton" id="Q_11_3_Btn" onclick="CheckMCAnswer(11,3,this)">?</button>&#160;&#160;Armonizaci&#x00F3;n o Acompa&#x00F1;amiento</li><li id="Q_11_4"><button class="FuncButton" id="Q_11_4_Btn" onclick="CheckMCAnswer(11,4,this)">?</button>&#160;&#160;Articulaci&#x00F3;n</li></ol></li>
+<li class="QuizQuestion" id="Q_12" style="display: none;"><div class="QuestionText">Secci&#x00F3;n 13 MODO MAYOR Y MODO MENOR<br />Ejercicio A<br />Escuchar&#x00E1;s un fragmento musical en el cual puede haber un cambio de modo.<br />Da clic para escuchar el fragmento musical<br /><br /><audio controls="controls"><source src="S13A.mp3" type="audio/mp3"/><br /><a href="S13A.mp3" title="S13A.mp3">S13A.mp3</a><br /></audio> <br /><br />Elige la opci&#x00F3;n que corresponda con el fragmento escuchado.</div><ol class="MCAnswers"><li id="Q_12_0"><button class="FuncButton" id="Q_12_0_Btn" onclick="CheckMCAnswer(12,0,this)">?</button>&#160;&#160;Modo menor - Modo mayor - Modo menor</li><li id="Q_12_1"><button class="FuncButton" id="Q_12_1_Btn" onclick="CheckMCAnswer(12,1,this)">?</button>&#160;&#160;Todo el fragmento est&#x00E1; en modo menor</li><li id="Q_12_2"><button class="FuncButton" id="Q_12_2_Btn" onclick="CheckMCAnswer(12,2,this)">?</button>&#160;&#160;Todo el fragmento est&#x00E1; en modo mayor</li><li id="Q_12_3"><button class="FuncButton" id="Q_12_3_Btn" onclick="CheckMCAnswer(12,3,this)">?</button>&#160;&#160;Modo mayor - Modo menor - Modo mayor</li><li id="Q_12_4"><button class="FuncButton" id="Q_12_4_Btn" onclick="CheckMCAnswer(12,4,this)">?</button>&#160;&#160;Modo menor - Modo mayor</li></ol></li>
+<li class="QuizQuestion" id="Q_13" style="display: none;"><div class="QuestionText">Secci&#x00F3;n 13 MODO MAYOR Y MODO MENOR<br />Ejercicio B<br />Escuchar&#x00E1;s un fragmento musical en el cual puede haber un cambio de modo.<br />Da clic para escuchar el fragmento musical<br /><br /><audio controls="controls"><source src="S13B.mp3" type="audio/mp3"/><br /><a href="S13B.mp3" title="S13B.mp3">S13B.mp3</a><br /></audio> <br /><br />Elige la opci&#x00F3;n que corresponda con el fragmento escuchado.</div><ol class="MCAnswers"><li id="Q_13_0"><button class="FuncButton" id="Q_13_0_Btn" onclick="CheckMCAnswer(13,0,this)">?</button>&#160;&#160;Modo menor - Modo mayor - Modo menor</li><li id="Q_13_1"><button class="FuncButton" id="Q_13_1_Btn" onclick="CheckMCAnswer(13,1,this)">?</button>&#160;&#160;Todo el fragmento est&#x00E1; en modo menor</li><li id="Q_13_2"><button class="FuncButton" id="Q_13_2_Btn" onclick="CheckMCAnswer(13,2,this)">?</button>&#160;&#160;Todo el fragmento est&#x00E1; en modo mayor</li><li id="Q_13_3"><button class="FuncButton" id="Q_13_3_Btn" onclick="CheckMCAnswer(13,3,this)">?</button>&#160;&#160;Modo mayor - Modo menor - Modo mayor</li><li id="Q_13_4"><button class="FuncButton" id="Q_13_4_Btn" onclick="CheckMCAnswer(13,4,this)">?</button>&#160;&#160;Modo menor - Modo mayor</li></ol></li></ol>
+
+
+
+</div>
+
+</div>
+
+<div class="Feedback" id="FeedbackDiv">
+<div class="FeedbackText" id="FeedbackContent"></div>
+<button id="FeedbackOKButton" class="FuncButton" onclick="HideFeedback(); return false;">&#160;Da clic para continuar&#160;</button>
+</div>
+
+<!-- BeginBottomNavButtons -->
+
+
+
+<!-- EndBottomNavButtons -->
+
+<!-- BeginSubmissionForm -->
+
+<!-- EndSubmissionForm -->
+
+</body>
+
+</html>
